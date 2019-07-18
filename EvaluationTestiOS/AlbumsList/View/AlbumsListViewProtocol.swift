@@ -9,4 +9,6 @@
 import Foundation
 
 protocol AlbumsListViewProtocol: class {
+    func startPreloader()
+    func stopPreloader()
 }

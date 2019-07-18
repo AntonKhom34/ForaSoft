@@ -1,5 +1,5 @@
 //
-//  AlnumsListPresenterProtocol.swift
+//  AlbumsListPresenterProtocol.swift
 //  EvaluationTestiOS
 //
 //  Created by Антон Хомяков on 18/07/2019.

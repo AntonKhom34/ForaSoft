@@ -1,5 +1,5 @@
 //
-//  ApiServiesProtocol.swift
+//  AlbumsResultProtocol.swift
 //  EvaluationTestiOS
 //
 //  Created by Антон Хомяков on 18/07/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ApiServiesProtocol {
-    func getAlbumsWithSearchBar(searchBar: String, onComplete: @escaping ([AlbumResult]) -> Void)
+protocol AlbumsResultProtocol {
+    var results: [AlbumResult] { get }
 }

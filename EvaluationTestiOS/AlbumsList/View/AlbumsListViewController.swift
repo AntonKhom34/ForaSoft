@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class AlbumsListViewController: UIViewController {
 
@@ -14,11 +15,17 @@ class AlbumsListViewController: UIViewController {
 
     var presenter: AlbumsListPresenterProtocol?
 
+    // MARK: - Outlets
+
+    @IBOutlet weak var searchBar: UISearchBar!
+
     // MARK: - Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    // MARK: - Events
 
     // MARK: - Private
 
@@ -33,4 +40,15 @@ class AlbumsListViewController: UIViewController {
 // MARK: - AlbumsListViewProtocol
 
 extension AlbumsListViewController: AlbumsListViewProtocol {
+
+    // MARK: - MBProgressHUD
+
+    func startPreloader() {
+        MBProgressHUD.showAdded(to: view, animated: true).isUserInteractionEnabled = true
+    }
+
+    func stopPreloader() {
+        MBProgressHUD.hide(for: view, animated: true)
+    }
+
 }

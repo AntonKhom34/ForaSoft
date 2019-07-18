@@ -14,11 +14,15 @@
 		CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD59BF6222E05C82004E3470 /* AlbumsListViewController.xib */; };
 		CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6522E05C98004E3470 /* AlbumsListViewProtocol.swift */; };
 		CD59BF6822E05D48004E3470 /* AlbumsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6722E05D48004E3470 /* AlbumsListPresenter.swift */; };
-		CD59BF6A22E05D9E004E3470 /* AlnumsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6922E05D9E004E3470 /* AlnumsListPresenterProtocol.swift */; };
+		CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6922E05D9E004E3470 /* AlbumsListPresenterProtocol.swift */; };
 		CD59BF6D22E05DD8004E3470 /* AlbumsListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6C22E05DD8004E3470 /* AlbumsListProvider.swift */; };
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
+		CDB0945422E0A18800A64269 /* AlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* AlbumsResult.swift */; };
+		CDB0945622E0A1B700A64269 /* AlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */; };
+		CDB0945822E0A47F00A64269 /* AlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* AlbumResult.swift */; };
+		CDB0945A22E0A48D00A64269 /* AlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */; };
 		FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,11 +39,15 @@
 		CD59BF6222E05C82004E3470 /* AlbumsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumsListViewController.xib; sourceTree = "<group>"; };
 		CD59BF6522E05C98004E3470 /* AlbumsListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewProtocol.swift; sourceTree = "<group>"; };
 		CD59BF6722E05D48004E3470 /* AlbumsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListPresenter.swift; sourceTree = "<group>"; };
-		CD59BF6922E05D9E004E3470 /* AlnumsListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlnumsListPresenterProtocol.swift; sourceTree = "<group>"; };
+		CD59BF6922E05D9E004E3470 /* AlbumsListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListPresenterProtocol.swift; sourceTree = "<group>"; };
 		CD59BF6C22E05DD8004E3470 /* AlbumsListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProvider.swift; sourceTree = "<group>"; };
 		CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProviderProtocol.swift; sourceTree = "<group>"; };
 		CD59BF7122E05E03004E3470 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
+		CDB0945322E0A18800A64269 /* AlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsResult.swift; sourceTree = "<group>"; };
+		CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsResultProtocol.swift; sourceTree = "<group>"; };
+		CDB0945722E0A47F00A64269 /* AlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResult.swift; sourceTree = "<group>"; };
+		CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResultProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 			children = (
 				CD59BF6B22E05DB8004E3470 /* Provider */,
 				CD59BF7022E05DE8004E3470 /* Servies */,
+				CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */,
+				CDB0945322E0A18800A64269 /* AlbumsResult.swift */,
+				CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */,
+				CDB0945722E0A47F00A64269 /* AlbumResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,7 +145,7 @@
 		CD59BF5E22E057D2004E3470 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CD59BF6922E05D9E004E3470 /* AlnumsListPresenterProtocol.swift */,
+				CD59BF6922E05D9E004E3470 /* AlbumsListPresenterProtocol.swift */,
 				CD59BF6722E05D48004E3470 /* AlbumsListPresenter.swift */,
 			);
 			path = Presenter;
@@ -169,6 +181,7 @@
 				CD59BF4322E052EC004E3470 /* Frameworks */,
 				CD59BF4422E052EC004E3470 /* Resources */,
 				CD59BF7522E069DE004E3470 /* SwiftLint */,
+				CD504366424DB5E49CCB4835 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +238,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CD504366424DB5E49CCB4835 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD59BF7522E069DE004E3470 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,14 +309,18 @@
 			files = (
 				CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */,
 				CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */,
-				CD59BF6A22E05D9E004E3470 /* AlnumsListPresenterProtocol.swift in Sources */,
+				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
+				CDB0945422E0A18800A64269 /* AlbumsResult.swift in Sources */,
 				CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */,
 				CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */,
+				CDB0945622E0A1B700A64269 /* AlbumsResultProtocol.swift in Sources */,
 				CD59BF4A22E052EC004E3470 /* AppDelegate.swift in Sources */,
 				CD59BF6822E05D48004E3470 /* AlbumsListPresenter.swift in Sources */,
 				CD59BF6D22E05DD8004E3470 /* AlbumsListProvider.swift in Sources */,
 				CD59BF6322E05C82004E3470 /* AlbumsListViewController.swift in Sources */,
 				CD59BF6022E05827004E3470 /* ViewControllerFactory.swift in Sources */,
+				CDB0945A22E0A48D00A64269 /* AlbumResultProtocol.swift in Sources */,
+				CDB0945822E0A47F00A64269 /* AlbumResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

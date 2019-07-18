@@ -9,4 +9,5 @@
 import Foundation
 
 protocol AlbumsListProviderProtocol {
+    func getAlbumsWithSearchBar(searchBar: String, onComplete: @escaping ([AlbumResult]) -> Void)
 }

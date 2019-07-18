@@ -7,4 +7,6 @@ target 'EvaluationTestiOS' do
 
   # Pods for EvaluationTestiOS
 
+pod 'MBProgressHUD', '~> 1.1.0'
+  
 end
