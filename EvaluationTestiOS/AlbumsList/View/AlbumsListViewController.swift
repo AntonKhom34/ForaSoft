@@ -9,19 +9,19 @@
 import UIKit
 
 class AlbumsListViewController: UIViewController {
-    
+
     // MARK: - Properties
-    
+
     var presenter: AlbumsListPresenterProtocol?
 
     // MARK: - Overrides
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     // MARK: - Private
-    
+
     private func getPresenter() -> AlbumsListPresenterProtocol {
         guard let presenter = presenter else {
             fatalError("Could not get presenter")

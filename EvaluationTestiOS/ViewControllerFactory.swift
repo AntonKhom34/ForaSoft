@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewControllerFactory {
-    
+
     // MARK: - AlbumsListViewController
-    
+
     static func makeAlbumsListViewController() -> UIViewController {
         let view = AlbumsListViewController()
         let presenter = AlbumsListPresenter(view: view,
                                             provider: AlbumsListProvider(service: ApiServies()))
-        
+
         view.presenter = presenter
-        
+
         return view
     }
-    
+
 }

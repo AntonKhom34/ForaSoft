@@ -9,19 +9,19 @@
 import Foundation
 
 class AlbumsListPresenter {
-    
+
     // MARK: - Properties
-    
+
     let view: AlbumsListViewProtocol
     let provider: AlbumsListProviderProtocol
-    
+
     // MARK: - init
-    
+
     init(view: AlbumsListViewProtocol, provider: AlbumsListProviderProtocol) {
         self.view = view
         self.provider = provider
     }
-    
+
 }
 
 // MARK: - AlbumsListPresenterProtocol

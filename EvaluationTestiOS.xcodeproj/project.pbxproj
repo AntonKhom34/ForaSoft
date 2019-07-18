@@ -19,9 +19,13 @@
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
+		FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D72A86738461212E1B6CA5 /* Pods-EvaluationTestiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTestiOS.debug.xcconfig"; path = "Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4AB4BF4BCE70DFDFDB1AB4F1 /* Pods-EvaluationTestiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTestiOS.release.xcconfig"; path = "Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS.release.xcconfig"; sourceTree = "<group>"; };
+		C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaluationTestiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59BF4622E052EC004E3470 /* EvaluationTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaluationTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59BF4922E052EC004E3470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD59BF5022E052ED004E3470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5937965DB72164EC57E6399E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		739E70B86C5F26BDB9AF4C7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12D72A86738461212E1B6CA5 /* Pods-EvaluationTestiOS.debug.xcconfig */,
+				4AB4BF4BCE70DFDFDB1AB4F1 /* Pods-EvaluationTestiOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD59BF3D22E052EC004E3470 = {
 			isa = PBXGroup;
 			children = (
 				CD59BF4822E052EC004E3470 /* EvaluationTestiOS */,
 				CD59BF4722E052EC004E3470 /* Products */,
+				739E70B86C5F26BDB9AF4C7A /* Pods */,
+				5937965DB72164EC57E6399E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD59BF5822E052ED004E3470 /* Build configuration list for PBXNativeTarget "EvaluationTestiOS" */;
 			buildPhases = (
+				F501E91686746DD8B3A878DB /* [CP] Check Pods Manifest.lock */,
 				CD59BF4222E052EC004E3470 /* Sources */,
 				CD59BF4322E052EC004E3470 /* Frameworks */,
 				CD59BF4422E052EC004E3470 /* Resources */,
+				CD59BF7522E069DE004E3470 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -197,6 +223,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD59BF7522E069DE004E3470 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
+		};
+		F501E91686746DD8B3A878DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EvaluationTestiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD59BF4222E052EC004E3470 /* Sources */ = {
@@ -337,6 +406,7 @@
 		};
 		CD59BF5922E052ED004E3470 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D72A86738461212E1B6CA5 /* Pods-EvaluationTestiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +425,7 @@
 		};
 		CD59BF5A22E052ED004E3470 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB4BF4BCE70DFDFDB1AB4F1 /* Pods-EvaluationTestiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

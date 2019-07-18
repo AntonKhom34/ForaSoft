@@ -9,13 +9,13 @@
 import Foundation
 
 class AlbumsListProvider {
-    
+
     // MARK: - Properties
-    
+
     let service: ApiServiesProtocol
-    
+
     // MARK: init
-    
+
     init(service: ApiServiesProtocol) {
         self.service = service
     }
