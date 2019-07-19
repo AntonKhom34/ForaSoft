@@ -1,5 +1,5 @@
 //
-//  AlbumsResultProtocol.swift
+//  DataAlbumsResultProtocol.swift
 //  EvaluationTestiOS
 //
 //  Created by Антон Хомяков on 18/07/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AlbumsResultProtocol {
-    var results: [AlbumResult] { get }
+protocol DataAlbumsResultProtocol {
+    var results: [DataAlbumResult] { get }
 }

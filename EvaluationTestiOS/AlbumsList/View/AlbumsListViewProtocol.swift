@@ -11,4 +11,6 @@ import Foundation
 protocol AlbumsListViewProtocol: class {
     func startPreloader()
     func stopPreloader()
+    func reloadCollection()
+    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int)
 }

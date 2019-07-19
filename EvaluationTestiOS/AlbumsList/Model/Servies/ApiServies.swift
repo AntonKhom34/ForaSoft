@@ -6,11 +6,11 @@
 //  Copyright © 2019 Антон Хомяков. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ApiServies {
     private let apiUrl = "https://itunes.apple.com/search?"
-    private let entityString = "&entity=album"
+    private let entityAndLimitString = "&entity=album&limit=10"
 }
 
 // MARK: - ApiServiesProtocol
@@ -24,8 +24,8 @@ extension ApiServies: ApiServiesProtocol {
             }
 
             do {
-                let dataResult = try JSONDecoder().decode(AlbumsResult.self, from: data)
-                onComplete(dataResult.results)
+                let dataResult = try JSONDecoder().decode(DataAlbumsResult.self, from: data)
+                onComplete(self.getImage(dataResult.results))
             } catch {
                 onComplete([])
             }
@@ -34,11 +34,27 @@ extension ApiServies: ApiServiesProtocol {
 
     // MARK: - Private
 
-    private func getUrlWithSearchBar(_ searchBar: String) -> URL {
-        let urlString = apiUrl + "term=\(searchBar)" + entityString
+    private func getUrlWithSearchBar(_ searchString: String) -> URL {
+        let urlString = apiUrl + "term=\(searchString)" + entityAndLimitString
         guard let url = URL(string: urlString) else {
             fatalError("Could not converted urlString: \(urlString) to URL")
         }
         return url
+    }
+
+    private func getImage(_ albums: [DataAlbumResult]) -> [AlbumResult] {
+        var albumResultsDictionary: [AlbumResult] = []
+
+        for album in albums {
+            if let data = try? Data(contentsOf: album.artworkUrl100) {
+                let image = UIImage(data: data)
+                if image != nil {
+                    let albumResultDictionary = AlbumResult.init(image: image!,
+                                                                 collectionId: album.collectionId)
+                    albumResultsDictionary.append(albumResultDictionary)
+                }
+            }
+        }
+        return albumResultsDictionary
     }
 }

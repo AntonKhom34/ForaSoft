@@ -1,5 +1,5 @@
 //
-//  AlbumsResult.swift
+//  DataAlbumResult.swift
 //  EvaluationTestiOS
 //
 //  Created by Антон Хомяков on 18/07/2019.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-class AlbumsResult: AlbumsResultProtocol, Codable {
-    var results: [AlbumResult]
+class DataAlbumResult: DataAlbumResultProtocol, Codable {
+    var collectionId: Int
+    var artworkUrl100: URL
 }

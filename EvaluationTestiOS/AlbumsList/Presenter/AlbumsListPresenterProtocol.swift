@@ -6,8 +6,11 @@
 //  Copyright © 2019 Антон Хомяков. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol AlbumsListPresenterProtocol: class {
     func onUserSelectedSearchString(_ searchString: String)
+    func getAlbumsCount() -> Int
+    func getAlbumImageAtIndex(_ index: Int) -> UIImage
+    func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int)
 }

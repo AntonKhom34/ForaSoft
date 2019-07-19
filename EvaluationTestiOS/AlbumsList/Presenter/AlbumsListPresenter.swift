@@ -6,7 +6,7 @@
 //  Copyright © 2019 Антон Хомяков. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class AlbumsListPresenter {
     var albums: [AlbumResult]
@@ -37,6 +37,18 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
         getAlbumsWithSearchString(searchString)
     }
 
+    func getAlbumsCount() -> Int {
+        return albums.count
+    }
+
+    func getAlbumImageAtIndex(_ index: Int) -> UIImage {
+        return albums[index].image
+    }
+
+    func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int) {
+        view.showDetailAlbumControllerWithCollectionId(albums[selectedAlbumIndex].collectionId)
+    }
+
     // MARK: - Private
 
     private func getAlbumsWithSearchString(_ searchString: String) {
@@ -48,14 +60,10 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
             if lastRequestId == strongSelf.lastRequestId {
                 strongSelf.view.stopPreloader()
                 strongSelf.albums = albums
-                //strongSelf.view.reloadTable()
+                strongSelf.view.reloadCollection()
             } else {
                 strongSelf.view.stopPreloader() // FIXME: - 
             }
         }
     }
-//    
-//    private func setModel() {
-//        
-//    }
 }

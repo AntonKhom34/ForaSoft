@@ -19,10 +19,14 @@
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
-		CDB0945422E0A18800A64269 /* AlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* AlbumsResult.swift */; };
-		CDB0945622E0A1B700A64269 /* AlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */; };
-		CDB0945822E0A47F00A64269 /* AlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* AlbumResult.swift */; };
-		CDB0945A22E0A48D00A64269 /* AlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */; };
+		CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */; };
+		CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */; };
+		CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */; };
+		CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */; };
+		CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4B722E2211800B5E608 /* CommentCell.swift */; };
+		CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD8E4B822E2211800B5E608 /* CommentCell.xib */; };
+		CDD8E4C022E24E3100B5E608 /* AlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4BF22E24E3100B5E608 /* AlbumResult.swift */; };
+		CDD8E4C222E2518F00B5E608 /* AlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4C122E2518F00B5E608 /* AlbumResultProtocol.swift */; };
 		FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,10 +48,14 @@
 		CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProviderProtocol.swift; sourceTree = "<group>"; };
 		CD59BF7122E05E03004E3470 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
-		CDB0945322E0A18800A64269 /* AlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsResult.swift; sourceTree = "<group>"; };
-		CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsResultProtocol.swift; sourceTree = "<group>"; };
-		CDB0945722E0A47F00A64269 /* AlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResult.swift; sourceTree = "<group>"; };
-		CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResultProtocol.swift; sourceTree = "<group>"; };
+		CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResult.swift; sourceTree = "<group>"; };
+		CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResultProtocol.swift; sourceTree = "<group>"; };
+		CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResult.swift; sourceTree = "<group>"; };
+		CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResultProtocol.swift; sourceTree = "<group>"; };
+		CDD8E4B722E2211800B5E608 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CDD8E4B822E2211800B5E608 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		CDD8E4BF22E24E3100B5E608 /* AlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResult.swift; sourceTree = "<group>"; };
+		CDD8E4C122E2518F00B5E608 /* AlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResultProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +143,12 @@
 			children = (
 				CD59BF6B22E05DB8004E3470 /* Provider */,
 				CD59BF7022E05DE8004E3470 /* Servies */,
-				CDB0945522E0A1B700A64269 /* AlbumsResultProtocol.swift */,
-				CDB0945322E0A18800A64269 /* AlbumsResult.swift */,
-				CDB0945922E0A48D00A64269 /* AlbumResultProtocol.swift */,
-				CDB0945722E0A47F00A64269 /* AlbumResult.swift */,
+				CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */,
+				CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */,
+				CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */,
+				CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */,
+				CDD8E4C122E2518F00B5E608 /* AlbumResultProtocol.swift */,
+				CDD8E4BF22E24E3100B5E608 /* AlbumResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +183,8 @@
 		CDD8E4B622E20B8600B5E608 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8E4B722E2211800B5E608 /* CommentCell.swift */,
+				CDD8E4B822E2211800B5E608 /* CommentCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -238,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
 				CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */,
 			);
@@ -318,17 +331,20 @@
 				CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */,
 				CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */,
 				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
-				CDB0945422E0A18800A64269 /* AlbumsResult.swift in Sources */,
+				CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */,
 				CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */,
+				CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */,
 				CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */,
-				CDB0945622E0A1B700A64269 /* AlbumsResultProtocol.swift in Sources */,
+				CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */,
 				CD59BF4A22E052EC004E3470 /* AppDelegate.swift in Sources */,
 				CD59BF6822E05D48004E3470 /* AlbumsListPresenter.swift in Sources */,
 				CD59BF6D22E05DD8004E3470 /* AlbumsListProvider.swift in Sources */,
 				CD59BF6322E05C82004E3470 /* AlbumsListViewController.swift in Sources */,
+				CDD8E4C022E24E3100B5E608 /* AlbumResult.swift in Sources */,
 				CD59BF6022E05827004E3470 /* ViewControllerFactory.swift in Sources */,
-				CDB0945A22E0A48D00A64269 /* AlbumResultProtocol.swift in Sources */,
-				CDB0945822E0A47F00A64269 /* AlbumResult.swift in Sources */,
+				CDD8E4C222E2518F00B5E608 /* AlbumResultProtocol.swift in Sources */,
+				CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */,
+				CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,15 @@ import UIKit
 import MBProgressHUD
 
 class AlbumsListViewController: UIViewController {
+    let numberOfItemPerRow: CGFloat = 3
+    let lineSpacing: CGFloat = 10
+    let interItemSpacing: CGFloat = 10
 
     // MARK: - Properties
 
     var presenter: AlbumsListPresenterProtocol?
+    private static let commentCellId = "commentCell"
+    var collectionViewFlowLayout: UICollectionViewFlowLayout!
 
     // MARK: - Outlets
 
@@ -27,14 +32,38 @@ class AlbumsListViewController: UIViewController {
         setup()
     }
 
-    // MARK: - Setup
-
-    func setup() {
-        searchBar.delegate = self
-        collectionView.dataSource = self
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupCollectionViewItemSize()
     }
 
-    // MARK: - Events
+    // MARK: - Setup
+
+    private func setup() {
+        searchBar.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
+                                forCellWithReuseIdentifier: AlbumsListViewController.commentCellId)
+    }
+
+    private func setupCollectionViewItemSize() {
+        if collectionViewFlowLayout == nil {
+
+            let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
+            let height = width
+
+            collectionViewFlowLayout = UICollectionViewFlowLayout()
+
+            collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
+            collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
+            collectionViewFlowLayout.scrollDirection = .vertical
+            collectionViewFlowLayout.minimumLineSpacing = lineSpacing
+            collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
+
+            collectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: false)
+        }
+    }
 
     // MARK: - Private
 
@@ -44,11 +73,20 @@ class AlbumsListViewController: UIViewController {
         }
         return presenter
     }
+
 }
 
 // MARK: - AlbumsListViewProtocol
 
 extension AlbumsListViewController: AlbumsListViewProtocol {
+
+    func reloadCollection() {
+        collectionView.reloadData()
+    }
+
+    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int) {
+        print(collectionId)
+    }
 
     // MARK: - MBProgressHUD
 
@@ -70,20 +108,34 @@ extension AlbumsListViewController: UISearchBarDelegate {
             getPresenter().onUserSelectedSearchString(searchText)
         }
     }
+
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension AlbumsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return getPresenter().getAlbumsCount()
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .black
-        // Configure the cell
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumsListViewController.commentCellId,
+                                                      for: indexPath)
+        guard let commentCell = cell as? CommentCell else {
+            fatalError("Cell is not CommentCell")
+        }
+
+        commentCell.setupCell(getPresenter().getAlbumImageAtIndex(indexPath.row))
+        return commentCell
+    }
+
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension AlbumsListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        getPresenter().onUserSelectedAlbumAtIndex(indexPath.row)
     }
 }
