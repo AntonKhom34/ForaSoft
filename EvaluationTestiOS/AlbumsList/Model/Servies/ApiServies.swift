@@ -16,8 +16,8 @@ class ApiServies {
 // MARK: - ApiServiesProtocol
 
 extension ApiServies: ApiServiesProtocol {
-    func getAlbumsWithSearchBar(searchBar: String, onComplete: @escaping ([AlbumResult]) -> Void) {
-        URLSession.shared.dataTask(with: getUrlWithSearchBar(searchBar)) { (data, _, error) in
+    func getAlbumsWithSearchString(searchString: String, onComplete: @escaping ([AlbumResult]) -> Void) {
+        URLSession.shared.dataTask(with: getUrlWithSearchBar(searchString)) { (data, _, error) in
             guard let data = data, error == nil else {
                 onComplete([])
                 return

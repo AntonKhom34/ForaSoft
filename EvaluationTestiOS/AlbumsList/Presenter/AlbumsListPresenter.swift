@@ -10,6 +10,7 @@ import Foundation
 
 class AlbumsListPresenter {
     var albums: [AlbumResult]
+    var lastRequestId: UUID?
 
     // MARK: - Properties
 
@@ -22,6 +23,7 @@ class AlbumsListPresenter {
         self.view = view
         self.provider = provider
         albums = []
+        lastRequestId = nil
     }
 
 }
@@ -30,17 +32,30 @@ class AlbumsListPresenter {
 
 extension AlbumsListPresenter: AlbumsListPresenterProtocol {
 
+    func onUserSelectedSearchString(_ searchString: String) {
+        lastRequestId = UUID.init()
+        getAlbumsWithSearchString(searchString)
+    }
+
     // MARK: - Private
 
-    private func showJokesWithCount(_ searchBar: String) {
+    private func getAlbumsWithSearchString(_ searchString: String) {
         view.startPreloader()
-        provider.getAlbumsWithSearchBar(searchBar: searchBar) { [weak self] albums in
+        provider.getAlbumsWithSearchString(searchString: searchString) { [weak self, lastRequestId] albums in
             guard let strongSelf = self else {
                 return
             }
-            strongSelf.view.stopPreloader()
-            strongSelf.albums = albums
-            //strongSelf.view.reloadTable()
+            if lastRequestId == strongSelf.lastRequestId {
+                strongSelf.view.stopPreloader()
+                strongSelf.albums = albums
+                //strongSelf.view.reloadTable()
+            } else {
+                strongSelf.view.stopPreloader() // FIXME: - 
+            }
         }
     }
+//    
+//    private func setModel() {
+//        
+//    }
 }

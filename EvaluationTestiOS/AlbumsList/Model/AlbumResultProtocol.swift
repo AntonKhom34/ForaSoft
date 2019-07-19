@@ -11,7 +11,7 @@ import Foundation
 protocol AlbumResultProtocol {
     var collectionType: String { get }
 
-//    var collectionName: String { get }
+    var collectionName: String { get }
 //
 //    var collectionCensoredName: String { get }
 //

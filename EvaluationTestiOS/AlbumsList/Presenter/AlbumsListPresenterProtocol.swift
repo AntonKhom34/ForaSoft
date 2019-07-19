@@ -9,4 +9,5 @@
 import Foundation
 
 protocol AlbumsListPresenterProtocol: class {
+    func onUserSelectedSearchString(_ searchString: String)
 }

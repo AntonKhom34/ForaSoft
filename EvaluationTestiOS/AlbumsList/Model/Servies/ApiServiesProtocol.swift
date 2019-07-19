@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ApiServiesProtocol {
-    func getAlbumsWithSearchBar(searchBar: String, onComplete: @escaping ([AlbumResult]) -> Void)
+    func getAlbumsWithSearchString(searchString: String, onComplete: @escaping ([AlbumResult]) -> Void)
 }

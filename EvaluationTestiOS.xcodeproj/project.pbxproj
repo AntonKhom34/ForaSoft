@@ -122,6 +122,7 @@
 		CD59BF5C22E057CC004E3470 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8E4B622E20B8600B5E608 /* Cell */,
 				CD59BF6522E05C98004E3470 /* AlbumsListViewProtocol.swift */,
 				CD59BF6122E05C82004E3470 /* AlbumsListViewController.swift */,
 				CD59BF6222E05C82004E3470 /* AlbumsListViewController.xib */,
@@ -167,6 +168,13 @@
 				CD59BF7122E05E03004E3470 /* ApiServies.swift */,
 			);
 			path = Servies;
+			sourceTree = "<group>";
+		};
+		CDD8E4B622E20B8600B5E608 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

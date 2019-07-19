@@ -11,7 +11,7 @@ import Foundation
 class AlbumResult: AlbumResultProtocol, Codable {
     var collectionType: String
 
-//    var collectionName: String
+    var collectionName: String
 //
 //    var collectionCensoredName: String
 //
