@@ -46,7 +46,8 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
     }
 
     func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int) {
-        view.showDetailAlbumControllerWithCollectionId(albums[selectedAlbumIndex].collectionId)
+        view.showDetailAlbumControllerWithCollectionId(albums[selectedAlbumIndex].collectionId,
+                                                       albums[selectedAlbumIndex].image)
     }
 
     // MARK: - Private

@@ -41,6 +41,11 @@ class AlbumsListViewController: UIViewController {
 
     private func setup() {
         searchBar.delegate = self
+        navigationController?.navigationBar.topItem?.title = "Альбомы"
+        setupCollectionView()
+    }
+
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
@@ -84,8 +89,9 @@ extension AlbumsListViewController: AlbumsListViewProtocol {
         collectionView.reloadData()
     }
 
-    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int) {
-        print(collectionId)
+    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int, _ image: UIImage) {
+        let viewController = ViewControllerFactory.makeDetailAlbumViewController(collectionId, image)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
     // MARK: - MBProgressHUD

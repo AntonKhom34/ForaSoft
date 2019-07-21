@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD510B2D22E3A4EF004224CC /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B2B22E3A4EF004224CC /* DetailAlbumViewController.swift */; };
+		CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD510B2C22E3A4EF004224CC /* DetailAlbumViewController.xib */; };
+		CD510B3022E3A4FE004224CC /* DetailAlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B2F22E3A4FE004224CC /* DetailAlbumPresenter.swift */; };
+		CD510B3422E3A52A004224CC /* DetailAlbumProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3322E3A52A004224CC /* DetailAlbumProvider.swift */; };
+		CD510B3622E3A53C004224CC /* AlbumDetailServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3522E3A53C004224CC /* AlbumDetailServies.swift */; };
+		CD510B3822E3A547004224CC /* AlbumDetailServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3722E3A547004224CC /* AlbumDetailServiesProtocol.swift */; };
+		CD510B3A22E3A55B004224CC /* DetailAlbumProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3922E3A55B004224CC /* DetailAlbumProviderProtocol.swift */; };
+		CD510B3C22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3B22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift */; };
+		CD510B3E22E3A5D3004224CC /* DetailAlbumViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3D22E3A5D3004224CC /* DetailAlbumViewProtocol.swift */; };
+		CD510B4022E3B55D004224CC /* AlbumDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B3F22E3B55D004224CC /* AlbumDataResult.swift */; };
+		CD510B4222E3B56A004224CC /* AlbumDataResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B4122E3B56A004224CC /* AlbumDataResultProtocol.swift */; };
+		CD510B4422E3B5C9004224CC /* DetailAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B4322E3B5C9004224CC /* DetailAlbumResult.swift */; };
+		CD510B4622E3B5E3004224CC /* DetailAlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD510B4522E3B5E3004224CC /* DetailAlbumResultProtocol.swift */; };
 		CD59BF4A22E052EC004E3470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF4922E052EC004E3470 /* AppDelegate.swift */; };
 		CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD59BF5022E052ED004E3470 /* Assets.xcassets */; };
 		CD59BF6022E05827004E3470 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF5F22E05827004E3470 /* ViewControllerFactory.swift */; };
@@ -34,6 +47,19 @@
 		12D72A86738461212E1B6CA5 /* Pods-EvaluationTestiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTestiOS.debug.xcconfig"; path = "Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4AB4BF4BCE70DFDFDB1AB4F1 /* Pods-EvaluationTestiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTestiOS.release.xcconfig"; path = "Target Support Files/Pods-EvaluationTestiOS/Pods-EvaluationTestiOS.release.xcconfig"; sourceTree = "<group>"; };
 		C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaluationTestiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD510B2B22E3A4EF004224CC /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
+		CD510B2C22E3A4EF004224CC /* DetailAlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAlbumViewController.xib; sourceTree = "<group>"; };
+		CD510B2F22E3A4FE004224CC /* DetailAlbumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumPresenter.swift; sourceTree = "<group>"; };
+		CD510B3322E3A52A004224CC /* DetailAlbumProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumProvider.swift; sourceTree = "<group>"; };
+		CD510B3522E3A53C004224CC /* AlbumDetailServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailServies.swift; sourceTree = "<group>"; };
+		CD510B3722E3A547004224CC /* AlbumDetailServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailServiesProtocol.swift; sourceTree = "<group>"; };
+		CD510B3922E3A55B004224CC /* DetailAlbumProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumProviderProtocol.swift; sourceTree = "<group>"; };
+		CD510B3B22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumPresenterProtocol.swift; sourceTree = "<group>"; };
+		CD510B3D22E3A5D3004224CC /* DetailAlbumViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewProtocol.swift; sourceTree = "<group>"; };
+		CD510B3F22E3B55D004224CC /* AlbumDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataResult.swift; sourceTree = "<group>"; };
+		CD510B4122E3B56A004224CC /* AlbumDataResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataResultProtocol.swift; sourceTree = "<group>"; };
+		CD510B4322E3B5C9004224CC /* DetailAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumResult.swift; sourceTree = "<group>"; };
+		CD510B4522E3B5E3004224CC /* DetailAlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumResultProtocol.swift; sourceTree = "<group>"; };
 		CD59BF4622E052EC004E3470 /* EvaluationTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaluationTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59BF4922E052EC004E3470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD59BF5022E052ED004E3470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +113,66 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD510B2722E3A3C4004224CC /* DetailAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B2922E3A4BE004224CC /* Presenter */,
+				CD510B2A22E3A4C0004224CC /* Model */,
+				CD510B2822E3A4BB004224CC /* View */,
+			);
+			path = DetailAlbum;
+			sourceTree = "<group>";
+		};
+		CD510B2822E3A4BB004224CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B3D22E3A5D3004224CC /* DetailAlbumViewProtocol.swift */,
+				CD510B2B22E3A4EF004224CC /* DetailAlbumViewController.swift */,
+				CD510B2C22E3A4EF004224CC /* DetailAlbumViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD510B2922E3A4BE004224CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B3B22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift */,
+				CD510B2F22E3A4FE004224CC /* DetailAlbumPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CD510B2A22E3A4C0004224CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B3222E3A508004224CC /* Provider */,
+				CD510B3122E3A506004224CC /* Servies */,
+				CD510B4122E3B56A004224CC /* AlbumDataResultProtocol.swift */,
+				CD510B3F22E3B55D004224CC /* AlbumDataResult.swift */,
+				CD510B4322E3B5C9004224CC /* DetailAlbumResult.swift */,
+				CD510B4522E3B5E3004224CC /* DetailAlbumResultProtocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD510B3122E3A506004224CC /* Servies */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B3722E3A547004224CC /* AlbumDetailServiesProtocol.swift */,
+				CD510B3522E3A53C004224CC /* AlbumDetailServies.swift */,
+			);
+			path = Servies;
+			sourceTree = "<group>";
+		};
+		CD510B3222E3A508004224CC /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CD510B3922E3A55B004224CC /* DetailAlbumProviderProtocol.swift */,
+				CD510B3322E3A52A004224CC /* DetailAlbumProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		CD59BF3D22E052EC004E3470 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				CD59BF5B22E057C0004E3470 /* AlbumsList */,
+				CD510B2722E3A3C4004224CC /* DetailAlbum */,
 				CD59BF4922E052EC004E3470 /* AppDelegate.swift */,
 				CD59BF5022E052ED004E3470 /* Assets.xcassets */,
 				CD59BF5522E052ED004E3470 /* Info.plist */,
@@ -251,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */,
+				CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
 				CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */,
 			);
@@ -330,21 +418,33 @@
 			files = (
 				CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */,
 				CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */,
+				CD510B4222E3B56A004224CC /* AlbumDataResultProtocol.swift in Sources */,
 				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
+				CD510B3422E3A52A004224CC /* DetailAlbumProvider.swift in Sources */,
 				CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */,
 				CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */,
 				CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */,
 				CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */,
+				CD510B4422E3B5C9004224CC /* DetailAlbumResult.swift in Sources */,
+				CD510B3622E3A53C004224CC /* AlbumDetailServies.swift in Sources */,
 				CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */,
+				CD510B3022E3A4FE004224CC /* DetailAlbumPresenter.swift in Sources */,
 				CD59BF4A22E052EC004E3470 /* AppDelegate.swift in Sources */,
 				CD59BF6822E05D48004E3470 /* AlbumsListPresenter.swift in Sources */,
 				CD59BF6D22E05DD8004E3470 /* AlbumsListProvider.swift in Sources */,
+				CD510B3822E3A547004224CC /* AlbumDetailServiesProtocol.swift in Sources */,
+				CD510B4622E3B5E3004224CC /* DetailAlbumResultProtocol.swift in Sources */,
 				CD59BF6322E05C82004E3470 /* AlbumsListViewController.swift in Sources */,
+				CD510B4022E3B55D004224CC /* AlbumDataResult.swift in Sources */,
 				CDD8E4C022E24E3100B5E608 /* AlbumResult.swift in Sources */,
+				CD510B2D22E3A4EF004224CC /* DetailAlbumViewController.swift in Sources */,
 				CD59BF6022E05827004E3470 /* ViewControllerFactory.swift in Sources */,
+				CD510B3A22E3A55B004224CC /* DetailAlbumProviderProtocol.swift in Sources */,
 				CDD8E4C222E2518F00B5E608 /* AlbumResultProtocol.swift in Sources */,
+				CD510B3E22E3A5D3004224CC /* DetailAlbumViewProtocol.swift in Sources */,
 				CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */,
 				CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */,
+				CD510B3C22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
