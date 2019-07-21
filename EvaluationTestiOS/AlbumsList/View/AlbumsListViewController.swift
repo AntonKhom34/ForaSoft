@@ -89,8 +89,8 @@ extension AlbumsListViewController: AlbumsListViewProtocol {
         collectionView.reloadData()
     }
 
-    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int, _ image: UIImage) {
-        let viewController = ViewControllerFactory.makeDetailAlbumViewController(collectionId, image)
+    func showDetailAlbumControllerWithCollectionId(album: AlbumResult) {
+        let viewController = ViewControllerFactory.makeDetailAlbumViewController(album: album)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
@@ -111,7 +111,8 @@ extension AlbumsListViewController: AlbumsListViewProtocol {
 extension AlbumsListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            getPresenter().onUserSelectedSearchString(searchText)
+            let correctSearchText = searchText.replacingOccurrences(of: " ", with: "+")
+            getPresenter().onUserSelectedSearchString(correctSearchText)
         }
     }
 

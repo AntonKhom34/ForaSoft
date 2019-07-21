@@ -11,4 +11,7 @@ import UIKit
 protocol AlbumResultProtocol {
     var image: UIImage { get }
     var collectionId: Int { get }
+    var collectionPrice: Float { get }
+    var collectionName: String { get }
+    var artistName: String { get }
 }

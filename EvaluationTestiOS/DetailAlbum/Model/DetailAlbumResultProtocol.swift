@@ -12,7 +12,6 @@ protocol DetailAlbumResultProtocol {
     var wrapperType: String { get }
     var trackName: String? { get }
     var trackPrice: Float? { get }
-    var collectionPrice: Float? { get }
     var primaryGenreName: String? { get }
-    var country: String? { get }
+    var trackNumber: Int? { get }
 }

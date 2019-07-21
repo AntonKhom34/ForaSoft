@@ -36,6 +36,8 @@
 		CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */; };
 		CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */; };
 		CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */; };
+		CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */; };
+		CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */; };
 		CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4B722E2211800B5E608 /* CommentCell.swift */; };
 		CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD8E4B822E2211800B5E608 /* CommentCell.xib */; };
 		CDD8E4C022E24E3100B5E608 /* AlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4BF22E24E3100B5E608 /* AlbumResult.swift */; };
@@ -78,6 +80,8 @@
 		CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResultProtocol.swift; sourceTree = "<group>"; };
 		CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResult.swift; sourceTree = "<group>"; };
 		CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResultProtocol.swift; sourceTree = "<group>"; };
+		CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
+		CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableCell.xib; sourceTree = "<group>"; };
 		CDD8E4B722E2211800B5E608 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		CDD8E4B822E2211800B5E608 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CDD8E4BF22E24E3100B5E608 /* AlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResult.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		CD510B2822E3A4BB004224CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDB2FEBD22E4ADC0003F7027 /* Cell */,
 				CD510B3D22E3A5D3004224CC /* DetailAlbumViewProtocol.swift */,
 				CD510B2B22E3A4EF004224CC /* DetailAlbumViewController.swift */,
 				CD510B2C22E3A4EF004224CC /* DetailAlbumViewController.xib */,
@@ -267,6 +272,15 @@
 			path = Servies;
 			sourceTree = "<group>";
 		};
+		CDB2FEBD22E4ADC0003F7027 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */,
+				CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CDD8E4B622E20B8600B5E608 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */,
 				CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */,
 				CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
@@ -421,6 +436,7 @@
 				CD510B4222E3B56A004224CC /* AlbumDataResultProtocol.swift in Sources */,
 				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
 				CD510B3422E3A52A004224CC /* DetailAlbumProvider.swift in Sources */,
+				CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */,
 				CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */,
 				CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */,
 				CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */,

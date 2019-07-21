@@ -24,12 +24,11 @@ class ViewControllerFactory {
 
     // MARK: - DetailAlbum
 
-    static func makeDetailAlbumViewController(_ collectionID: Int, _ image: UIImage) -> UIViewController {
+    static func makeDetailAlbumViewController(album: AlbumResult) -> UIViewController {
         let view = DetailAlbumViewController()
         let presenter = DetailAlbumPresenter(view: view,
                                              provider: DetailAlbumProvider(service: AlbumDetailServies()),
-                                             collectionID: collectionID,
-                                             image: image)
+                                             album: album)
 
         view.presenter = presenter
 

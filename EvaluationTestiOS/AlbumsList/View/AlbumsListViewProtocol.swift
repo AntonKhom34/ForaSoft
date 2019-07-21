@@ -6,11 +6,11 @@
 //  Copyright © 2019 Антон Хомяков. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol AlbumsListViewProtocol: class {
     func startPreloader()
     func stopPreloader()
     func reloadCollection()
-    func showDetailAlbumControllerWithCollectionId(_ collectionId: Int, _ image: UIImage)
+    func showDetailAlbumControllerWithCollectionId(album: AlbumResult)
 }

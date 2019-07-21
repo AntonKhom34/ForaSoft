@@ -50,7 +50,10 @@ extension ApiServies: ApiServiesProtocol {
                 let image = UIImage(data: data)
                 if image != nil {
                     let albumResultDictionary = AlbumResult.init(image: image!,
-                                                                 collectionId: album.collectionId)
+                                                                 collectionId: album.collectionId,
+                                                                 collectionPrice: album.collectionPrice,
+                                                                 collectionName: album.collectionName,
+                                                                 artistName: album.artistName)
                     albumResultsDictionary.append(albumResultDictionary)
                 }
             }

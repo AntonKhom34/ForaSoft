@@ -12,7 +12,6 @@ class DetailAlbumResult: DetailAlbumResultProtocol, Codable {
     var wrapperType: String
     var trackName: String?
     var trackPrice: Float?
-    var collectionPrice: Float?
     var primaryGenreName: String?
-    var country: String?
+    var trackNumber: Int?
 }

@@ -6,8 +6,12 @@
 //  Copyright © 2019 Антон Хомяков. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol DetailAlbumViewProtocol {
-    func setLable(_ artistName: String)
+    func setupAlbumLogo(_ albumLogo: UIImage)
+    func setAlbumPrice(_ price: Float)
+    func setAlbumName(_ albumName: String)
+    func setAlbumArtistName(_ albumAutorName: String)
+    func reloadTable()
 }
