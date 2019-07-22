@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DetailAlbumProviderProtocol {
-    func getAlbumDetail(_ colletionId: Int, onComplete: @escaping ([DetailAlbumResult]) -> Void)
+    func getAlbumDetail(_ colletionId: Int, onComplete: @escaping ([DetailTrackResult]) -> Void)
 }

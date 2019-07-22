@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CommentCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
 
     // MARK: - Override
 
@@ -23,8 +24,8 @@ class CommentCell: UICollectionViewCell {
 
     // MARK: - SetupCell
 
-    func setupCell(_ image: UIImage) {
-        imageView.image = image
+    func setupCell(_ url: URL) {
+        imageView.kf.setImage(with: url)
     }
 
 }

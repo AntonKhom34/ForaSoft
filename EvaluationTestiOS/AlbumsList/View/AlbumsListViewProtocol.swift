@@ -12,5 +12,5 @@ protocol AlbumsListViewProtocol: class {
     func startPreloader()
     func stopPreloader()
     func reloadCollection()
-    func showDetailAlbumControllerWithCollectionId(album: AlbumResult)
+    func showDetailAlbumControllerWithCollectionId(album: DataAlbumResult)
 }

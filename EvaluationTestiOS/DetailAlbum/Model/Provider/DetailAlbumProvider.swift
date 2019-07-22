@@ -22,7 +22,7 @@ class DetailAlbumProvider {
 
 extension DetailAlbumProvider: DetailAlbumProviderProtocol {
 
-    func getAlbumDetail(_ colletionId: Int, onComplete: @escaping ([DetailAlbumResult]) -> Void) {
+    func getAlbumDetail(_ colletionId: Int, onComplete: @escaping ([DetailTrackResult]) -> Void) {
         service.getAlbumDetail(colletionId, onComplete: { songs in
             DispatchQueue.main.async {
                 onComplete(songs)

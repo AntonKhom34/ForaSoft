@@ -11,6 +11,6 @@ import UIKit
 protocol AlbumsListPresenterProtocol: class {
     func onUserSelectedSearchString(_ searchString: String)
     func getAlbumsCount() -> Int
-    func getAlbumImageAtIndex(_ index: Int) -> UIImage
+    func getAlbumImageAtIndex(_ index: Int) -> URL
     func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int)
 }

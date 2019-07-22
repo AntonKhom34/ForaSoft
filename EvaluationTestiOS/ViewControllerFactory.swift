@@ -24,7 +24,7 @@ class ViewControllerFactory {
 
     // MARK: - DetailAlbum
 
-    static func makeDetailAlbumViewController(album: AlbumResult) -> UIViewController {
+    static func makeDetailAlbumViewController(album: DataAlbumResult) -> UIViewController {
         let view = DetailAlbumViewController()
         let presenter = DetailAlbumPresenter(view: view,
                                              provider: DetailAlbumProvider(service: AlbumDetailServies()),

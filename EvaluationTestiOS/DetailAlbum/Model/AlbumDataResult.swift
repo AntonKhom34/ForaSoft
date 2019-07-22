@@ -9,5 +9,5 @@
 import Foundation
 
 class AlbumDataResult: AlbumDataResultProtocol, Codable {
-    var results: [DetailAlbumResult]
+    var results: [DetailTrackResult]
 }

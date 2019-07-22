@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import IQKeyboardManagerSwift
 
 class AlbumsListViewController: UIViewController {
     let numberOfItemPerRow: CGFloat = 3
@@ -18,12 +19,12 @@ class AlbumsListViewController: UIViewController {
 
     var presenter: AlbumsListPresenterProtocol?
     private static let commentCellId = "commentCell"
-    var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    var collectionViewFlowLayout: UICollectionViewFlowLayout?
 
     // MARK: - Outlets
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: - Overrides
 
@@ -60,13 +61,13 @@ class AlbumsListViewController: UIViewController {
 
             collectionViewFlowLayout = UICollectionViewFlowLayout()
 
-            collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
-            collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
-            collectionViewFlowLayout.scrollDirection = .vertical
-            collectionViewFlowLayout.minimumLineSpacing = lineSpacing
-            collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
+            getCollectionViewFlowLayout().itemSize = CGSize(width: width, height: height)
+            getCollectionViewFlowLayout().sectionInset = UIEdgeInsets.zero
+            getCollectionViewFlowLayout().scrollDirection = .vertical
+            getCollectionViewFlowLayout().minimumLineSpacing = lineSpacing
+            getCollectionViewFlowLayout().minimumInteritemSpacing = interItemSpacing
 
-            collectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: false)
+            collectionView.setCollectionViewLayout(getCollectionViewFlowLayout(), animated: false)
         }
     }
 
@@ -79,6 +80,13 @@ class AlbumsListViewController: UIViewController {
         return presenter
     }
 
+    private func getCollectionViewFlowLayout() -> UICollectionViewFlowLayout {
+        guard let collectionViewFlowLayout = collectionViewFlowLayout else {
+            fatalError("Could not get collectionViewFlowLayout")
+        }
+        return collectionViewFlowLayout
+    }
+
 }
 
 // MARK: - AlbumsListViewProtocol
@@ -89,7 +97,7 @@ extension AlbumsListViewController: AlbumsListViewProtocol {
         collectionView.reloadData()
     }
 
-    func showDetailAlbumControllerWithCollectionId(album: AlbumResult) {
+    func showDetailAlbumControllerWithCollectionId(album: DataAlbumResult) {
         let viewController = ViewControllerFactory.makeDetailAlbumViewController(album: album)
         self.navigationController?.pushViewController(viewController, animated: true)
     }

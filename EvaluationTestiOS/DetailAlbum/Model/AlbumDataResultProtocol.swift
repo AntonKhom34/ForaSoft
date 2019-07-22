@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AlbumDataResultProtocol {
-    var results: [DetailAlbumResult] { get }
+    var results: [DetailTrackResult] { get }
 }

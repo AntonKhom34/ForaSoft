@@ -9,7 +9,7 @@
 import UIKit
 
 class AlbumsListPresenter {
-    var albums: [AlbumResult]
+    var albums: [DataAlbumResult]
     var lastRequestId: UUID?
 
     // MARK: - Properties
@@ -41,8 +41,8 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
         return albums.count
     }
 
-    func getAlbumImageAtIndex(_ index: Int) -> UIImage {
-        return albums[index].image
+    func getAlbumImageAtIndex(_ index: Int) -> URL {
+        return albums[index].artworkUrl100
     }
 
     func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int) {
@@ -62,7 +62,7 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
                 strongSelf.albums = albums
                 strongSelf.view.reloadCollection()
             } else {
-                strongSelf.view.stopPreloader() // FIXME: - 
+                strongSelf.view.stopPreloader()
             }
         }
     }

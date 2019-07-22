@@ -12,9 +12,9 @@ class CommentTableCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var trackNameLabel: UILabel!
-    @IBOutlet weak var trackNumberLabel: UILabel!
-    @IBOutlet weak var trackPriceLabel: UILabel!
+    @IBOutlet private weak var trackNameLabel: UILabel!
+    @IBOutlet private weak var trackNumberLabel: UILabel!
+    @IBOutlet private weak var trackPriceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,15 +29,11 @@ class CommentTableCell: UITableViewCell {
 
     // MARK: - SetupCell
 
-    func setupCell(_ detailAlbumResult: DetailAlbumResult) {
+    func setupCell(_ detailAlbumResult: DetailTrackResult) {
         trackNameLabel.text = detailAlbumResult.trackName
-        guard let trackPrice = detailAlbumResult.trackPrice else {
-            return
-        }
+        let trackPrice = detailAlbumResult.trackPrice
         trackPriceLabel.text = "\(trackPrice)$"
-        guard let trackNumber = detailAlbumResult.trackNumber else {
-            return
-        }
+        let trackNumber = detailAlbumResult.trackNumber
         trackNumberLabel.text = "\(trackNumber)"
     }
 

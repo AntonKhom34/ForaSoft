@@ -8,5 +8,7 @@ target 'EvaluationTestiOS' do
   # Pods for EvaluationTestiOS
 
 pod 'MBProgressHUD', '~> 1.1.0'
+pod 'Kingfisher', '~> 5.0'
+pod 'IQKeyboardManagerSwift'
   
 end

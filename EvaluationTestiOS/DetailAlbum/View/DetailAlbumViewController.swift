@@ -16,11 +16,11 @@ class DetailAlbumViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var albumLogoImage: UIImageView!
-    @IBOutlet weak var albomNameLabel: UILabel!
-    @IBOutlet weak var albumArtistNameLabel: UILabel!
-    @IBOutlet weak var albomPriceLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var albumLogoImage: UIImageView!
+    @IBOutlet private weak var albomNameLabel: UILabel!
+    @IBOutlet private weak var albumArtistNameLabel: UILabel!
+    @IBOutlet private weak var albomPriceLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +59,8 @@ extension DetailAlbumViewController: DetailAlbumViewProtocol {
         tableView.reloadData()
     }
 
-    func setupAlbumLogo(_ albumLogo: UIImage) {
-        albumLogoImage.image = albumLogo
+    func setupAlbumLogo(_ url: URL) {
+        albumLogoImage.kf.setImage(with: url)
     }
 
     func setAlbumArtistName(_ albumArtistName: String) {

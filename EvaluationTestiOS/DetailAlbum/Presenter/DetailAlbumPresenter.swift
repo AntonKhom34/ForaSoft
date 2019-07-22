@@ -9,17 +9,17 @@
 import UIKit
 
 class DetailAlbumPresenter {
-    var detailalbum: [DetailAlbumResult]
+    var detailalbum: [DetailTrackResult]
 
     // MARK: - Properties
 
     var view: DetailAlbumViewProtocol
     var provider: DetailAlbumProviderProtocol
-    var album: AlbumResult
+    var album: DataAlbumResult
 
     // MARK: - Init
 
-    init(view: DetailAlbumViewProtocol, provider: DetailAlbumProviderProtocol, album: AlbumResult) {
+    init(view: DetailAlbumViewProtocol, provider: DetailAlbumProviderProtocol, album: DataAlbumResult) {
         self.view = view
         self.provider = provider
         self.album = album
@@ -46,7 +46,7 @@ extension DetailAlbumPresenter: DetailAlbumPresenterProtocol {
         }
     }
 
-    func getTrackAtIndex(_ index: Int) -> DetailAlbumResult {
+    func getTrackAtIndex(_ index: Int) -> DetailTrackResult {
         return detailalbum[index]
     }
 
@@ -55,7 +55,7 @@ extension DetailAlbumPresenter: DetailAlbumPresenterProtocol {
     private func setAlbumInfo() {
         view.setAlbumName(album.collectionName)
         view.setAlbumPrice(album.collectionPrice)
-        view.setupAlbumLogo(album.image)
+        view.setupAlbumLogo(album.artworkUrl100)
         view.setAlbumArtistName(album.artistName)
     }
 

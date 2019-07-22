@@ -1,16 +1,24 @@
 PODS:
+  - IQKeyboardManagerSwift (6.4.0)
+  - Kingfisher (5.6.0)
   - MBProgressHUD (1.1.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 5.0)
   - MBProgressHUD (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
+    - Kingfisher
     - MBProgressHUD
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
 
-PODFILE CHECKSUM: 6ef20c558f2f965af0fed7a1f2543762af518090
+PODFILE CHECKSUM: 5a3ffdbf4d13df7fad554851c314f12d9bc65c18
 
 COCOAPODS: 1.6.2

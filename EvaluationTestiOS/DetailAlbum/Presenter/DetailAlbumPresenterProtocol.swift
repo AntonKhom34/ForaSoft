@@ -11,5 +11,5 @@ import Foundation
 protocol DetailAlbumPresenterProtocol {
     func onViewDidLoad()
     func tracksCount() -> Int
-    func getTrackAtIndex(_ index: Int) -> DetailAlbumResult
+    func getTrackAtIndex(_ index: Int) -> DetailTrackResult
 }

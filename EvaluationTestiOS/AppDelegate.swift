@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = ViewControllerFactory.makeAlbumsListViewController()
         window.rootViewController = UINavigationController(rootViewController: rootViewController)
         window.makeKeyAndVisible()
+
+        // MARK: - IQKeyboardManager
+
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 
         return true
     }
