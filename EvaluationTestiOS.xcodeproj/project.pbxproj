@@ -33,6 +33,7 @@
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
+		CD9C987E22E71BD00091BF9F /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9C987D22E71BD00091BF9F /* CommentCell.xib */; };
 		CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */; };
 		CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */; };
 		CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */; };
@@ -40,7 +41,6 @@
 		CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */; };
 		CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */; };
 		CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4B722E2211800B5E608 /* CommentCell.swift */; };
-		CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD8E4B822E2211800B5E608 /* CommentCell.xib */; };
 		FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +76,7 @@
 		CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProviderProtocol.swift; sourceTree = "<group>"; };
 		CD59BF7122E05E03004E3470 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
+		CD9C987D22E71BD00091BF9F /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResult.swift; sourceTree = "<group>"; };
 		CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResultProtocol.swift; sourceTree = "<group>"; };
 		CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResult.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
 		CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableCell.xib; sourceTree = "<group>"; };
 		CDD8E4B722E2211800B5E608 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		CDD8E4B822E2211800B5E608 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +160,8 @@
 				CD510B3122E3A506004224CC /* Servies */,
 				CD510B4122E3B56A004224CC /* AlbumDataResultProtocol.swift */,
 				CD510B3F22E3B55D004224CC /* AlbumDataResult.swift */,
-				CD510B4322E3B5C9004224CC /* DetailTrackResult.swift */,
 				CD510B4522E3B5E3004224CC /* DetailTrackResultProtocol.swift */,
+				CD510B4322E3B5C9004224CC /* DetailTrackResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD8E4B722E2211800B5E608 /* CommentCell.swift */,
-				CDD8E4B822E2211800B5E608 /* CommentCell.xib */,
+				CD9C987D22E71BD00091BF9F /* CommentCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -356,8 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9C987E22E71BD00091BF9F /* CommentCell.xib in Resources */,
 				CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */,
-				CDD8E4BA22E2211800B5E608 /* CommentCell.xib in Resources */,
 				CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
 				CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */,

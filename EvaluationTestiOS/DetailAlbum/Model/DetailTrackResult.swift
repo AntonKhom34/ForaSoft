@@ -11,7 +11,7 @@ import Foundation
 class DetailTrackResult: DetailTrackResultProtocol, Codable {
     var wrapperType: String
     var trackName: String
-    var trackPrice: Float
-    var primaryGenreName: String
+    var trackPrice: Float?
     var trackNumber: Int
+    var trackTimeMillis: Int?
 }

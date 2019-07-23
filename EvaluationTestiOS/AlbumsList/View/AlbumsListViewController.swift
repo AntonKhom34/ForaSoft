@@ -153,4 +153,5 @@ extension AlbumsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         getPresenter().onUserSelectedAlbumAtIndex(indexPath.row)
     }
+
 }

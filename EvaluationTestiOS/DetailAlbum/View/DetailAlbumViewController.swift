@@ -20,6 +20,7 @@ class DetailAlbumViewController: UIViewController {
     @IBOutlet private weak var albomNameLabel: UILabel!
     @IBOutlet private weak var albumArtistNameLabel: UILabel!
     @IBOutlet private weak var albomPriceLabel: UILabel!
+    @IBOutlet private weak var genreNameLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -59,19 +60,18 @@ extension DetailAlbumViewController: DetailAlbumViewProtocol {
         tableView.reloadData()
     }
 
-    func setupAlbumLogo(_ url: URL) {
+    func setupAlbumInfo(_ url: URL,
+                        _ albumArtistName: String,
+                        _ albumName: String,
+                        _ price: Double?,
+                        _ genreName: String) {
         albumLogoImage.kf.setImage(with: url)
-    }
-
-    func setAlbumArtistName(_ albumArtistName: String) {
         albumArtistNameLabel.text = "Исполнитель: \(albumArtistName)"
-    }
-
-    func setAlbumName(_ albumName: String) {
         albomNameLabel.text = "Альбом: \(albumName)"
-    }
-
-    func setAlbumPrice(_ price: Float) {
+        genreNameLabel.text = "Жанр: \(genreName)"
+        guard let price = price else {
+            return
+        }
         albomPriceLabel.text = "Стоимость альбома: \(price)$"
     }
 

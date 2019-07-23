@@ -53,10 +53,11 @@ extension DetailAlbumPresenter: DetailAlbumPresenterProtocol {
     // MARK: - Private
 
     private func setAlbumInfo() {
-        view.setAlbumName(album.collectionName)
-        view.setAlbumPrice(album.collectionPrice)
-        view.setupAlbumLogo(album.artworkUrl100)
-        view.setAlbumArtistName(album.artistName)
+        view.setupAlbumInfo(album.artworkUrl100,
+                            album.artistName,
+                            album.collectionName,
+                            album.collectionPrice,
+                            album.primaryGenreName)
     }
 
 }

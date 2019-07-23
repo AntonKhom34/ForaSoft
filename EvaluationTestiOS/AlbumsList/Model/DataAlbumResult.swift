@@ -9,9 +9,10 @@
 import Foundation
 
 class DataAlbumResult: DataAlbumResultProtocol, Codable {
-    var collectionPrice: Float
-    var collectionName: String
-    var collectionId: Int
     var artworkUrl100: URL
+    var collectionId: Int
+    var collectionPrice: Double?
+    var collectionName: String
     var artistName: String
+    var primaryGenreName: String
 }

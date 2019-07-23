@@ -9,9 +9,10 @@
 import Foundation
 
 protocol DetailAlbumViewProtocol {
-    func setupAlbumLogo(_ url: URL)
-    func setAlbumPrice(_ price: Float)
-    func setAlbumName(_ albumName: String)
-    func setAlbumArtistName(_ albumAutorName: String)
+    func setupAlbumInfo(_ url: URL,
+                        _ albumArtistName: String,
+                        _ albumName: String,
+                        _ price: Double?,
+                        _ genreName: String)
     func reloadTable()
 }

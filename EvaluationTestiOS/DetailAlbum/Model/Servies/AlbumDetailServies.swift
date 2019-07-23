@@ -38,12 +38,4 @@ extension AlbumDetailServies: AlbumDetailServiesProtocol {
         return url
     }
 
-//    private func getAlbumInfo(_ detailAlbumResult: [DetailAlbumResult]) -> [DetailAlbumResult] {
-//        var trakInfo: [DetailAlbumResult] = []
-//
-//        for result in detailAlbumResult where result.wrapperType == "track" {
-//            trakInfo.append(result)
-//        }
-//        return trakInfo
-//    }
 }

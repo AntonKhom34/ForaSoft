@@ -15,6 +15,7 @@ class CommentTableCell: UITableViewCell {
     @IBOutlet private weak var trackNameLabel: UILabel!
     @IBOutlet private weak var trackNumberLabel: UILabel!
     @IBOutlet private weak var trackPriceLabel: UILabel!
+    @IBOutlet private weak var trackTimeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,10 +32,34 @@ class CommentTableCell: UITableViewCell {
 
     func setupCell(_ detailAlbumResult: DetailTrackResult) {
         trackNameLabel.text = detailAlbumResult.trackName
-        let trackPrice = detailAlbumResult.trackPrice
-        trackPriceLabel.text = "\(trackPrice)$"
         let trackNumber = detailAlbumResult.trackNumber
         trackNumberLabel.text = "\(trackNumber)"
+        setTrackTime(detailAlbumResult)
+        setTrackPrice(detailAlbumResult.trackPrice)
+    }
+
+    // MARK: - Private
+
+    private func setTrackPrice(_ trackPrice: Float?) {
+        guard let trackPrice = trackPrice else {
+            return
+        }
+        trackPriceLabel.text = "\(trackPrice)$"
+    }
+
+    private func setTrackTime(_ detailAlbumResult: DetailTrackResult) {
+        guard let trackTime = detailAlbumResult.trackTimeMillis else {
+            return
+        }
+        trackTimeLabel.text = stringFromTimeInterval(trackTime)
+    }
+
+    private func stringFromTimeInterval(_ timeMS: Int) -> String {
+        let timeSecons = timeMS / 1000
+        let minutes = (timeSecons % 3600) / 60
+        let seconds = (timeSecons % 3600) % 60
+
+        return String(format: "%d:%0.2d", minutes, seconds)
     }
 
 }

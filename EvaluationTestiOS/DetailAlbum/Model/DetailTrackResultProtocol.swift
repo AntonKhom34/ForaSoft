@@ -11,7 +11,7 @@ import Foundation
 protocol DetailTrackResultProtocol {
     var wrapperType: String { get }
     var trackName: String { get }
-    var trackPrice: Float { get }
-    var primaryGenreName: String { get }
+    var trackPrice: Float? { get }
     var trackNumber: Int { get }
+    var trackTimeMillis: Int? { get }
 }
