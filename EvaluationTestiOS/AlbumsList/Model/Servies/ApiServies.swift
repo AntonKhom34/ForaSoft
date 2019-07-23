@@ -10,14 +10,16 @@ import UIKit
 
 class ApiServies {
     private let apiUrl = "https://itunes.apple.com/search?term="
-    private let entityAndLimitString = "&entity=album&limit=10"
+    private let entityAndLimitString = "&entity=album&limit="
 }
 
 // MARK: - ApiServiesProtocol
 
 extension ApiServies: ApiServiesProtocol {
-    func getAlbumsWithSearchString(searchString: String, onComplete: @escaping ([DataAlbumResult]) -> Void) {
-        URLSession.shared.dataTask(with: getUrlWithSearchBar(searchString)) { (data, _, error) in
+    func getAlbumsWithSearchString(_ searchString: String,
+                                   _ albumsCount: Int,
+                                   onComplete: @escaping ([DataAlbumResult]) -> Void) {
+        URLSession.shared.dataTask(with: getUrlWithSearchBar(searchString, albumsCount)) { (data, _, error) in
             guard let data = data, error == nil else {
                 onComplete([])
                 return
@@ -34,8 +36,8 @@ extension ApiServies: ApiServiesProtocol {
 
     // MARK: - Private
 
-    private func getUrlWithSearchBar(_ searchString: String) -> URL {
-        let urlString = apiUrl + "\(searchString)" + entityAndLimitString
+    private func getUrlWithSearchBar(_ searchString: String, _ albumsCount: Int) -> URL {
+        let urlString = apiUrl + "\(searchString)" + entityAndLimitString + "\(albumsCount)"
         guard let url = URL(string: urlString) else {
             fatalError("Could not converted urlString: \(urlString) to URL")
         }

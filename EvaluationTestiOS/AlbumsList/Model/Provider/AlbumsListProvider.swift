@@ -24,8 +24,12 @@ class AlbumsListProvider {
 // MARK: - AlbumsListProviderProtocol
 
 extension AlbumsListProvider: AlbumsListProviderProtocol {
-    func getAlbumsWithSearchString(searchString: String, onComplete: @escaping ([DataAlbumResult]) -> Void) {
-        service.getAlbumsWithSearchString(searchString: searchString, onComplete: { albums in
+    func getAlbumsWithSearchString(_ searchString: String,
+                                   _ albumsCount: Int,
+                                   onComplete: @escaping ([DataAlbumResult]) -> Void) {
+        service.getAlbumsWithSearchString(searchString,
+                                          albumsCount,
+                                          onComplete: { albums in
             DispatchQueue.main.async {
                 onComplete(albums)
             }

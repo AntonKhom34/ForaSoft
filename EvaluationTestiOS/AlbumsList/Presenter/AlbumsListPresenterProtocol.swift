@@ -13,4 +13,5 @@ protocol AlbumsListPresenterProtocol: class {
     func getAlbumsCount() -> Int
     func getAlbumImageAtIndex(_ index: Int) -> URL
     func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int)
+    func onUserSelectedLoadTenMore(_ searchString: String)
 }

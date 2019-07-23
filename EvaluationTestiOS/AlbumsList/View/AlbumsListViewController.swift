@@ -87,6 +87,18 @@ class AlbumsListViewController: UIViewController {
         return collectionViewFlowLayout
     }
 
+    // MARK: - Events
+
+    @IBAction func tappedButtonLoadTenMore(_ sender: Any) {
+        guard let searchBarText = searchBar.text else {
+            return
+        }
+        if searchBarText != "" {
+            let correctSearchText = searchBarText.replacingOccurrences(of: " ", with: "+")
+            getPresenter().onUserSelectedLoadTenMore(correctSearchText)
+        }
+    }
+
 }
 
 // MARK: - AlbumsListViewProtocol

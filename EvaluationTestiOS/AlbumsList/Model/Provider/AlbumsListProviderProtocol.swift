@@ -9,5 +9,7 @@
 import Foundation
 
 protocol AlbumsListProviderProtocol {
-    func getAlbumsWithSearchString(searchString: String, onComplete: @escaping ([DataAlbumResult]) -> Void)
+    func getAlbumsWithSearchString(_ searchString: String,
+                                   _ albumsCount: Int,
+                                   onComplete: @escaping ([DataAlbumResult]) -> Void)
 }
