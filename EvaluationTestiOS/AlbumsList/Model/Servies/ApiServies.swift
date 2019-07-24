@@ -38,7 +38,10 @@ extension ApiServies: ApiServiesProtocol {
     // MARK: - Private
 
     private func getUrlWithSearchBar(_ searchString: String, _ albumsCount: Int) -> URL {
-        let urlString = apiUrl + "\(searchString)" + entityAndLimitString + "\(albumsCount)" + sortString
+        let string = apiUrl + "\(searchString)" + entityAndLimitString + "\(albumsCount)" + sortString
+        guard let urlString = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            fatalError("Could not encoding: \(string)")
+        }
         guard let url = URL(string: urlString) else {
             fatalError("Could not converted urlString: \(urlString) to URL")
         }
