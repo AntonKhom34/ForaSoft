@@ -130,6 +130,7 @@ extension AlbumsListViewController: UISearchBarDelegate {
         getPresenter().onUserKeyboardSearchButtonPressed()
         view.endEditing(true)
     }
+
 }
 
 // MARK: - UICollectionViewDataSource
@@ -164,6 +165,7 @@ extension AlbumsListViewController: UICollectionViewDataSource {
                 return UICollectionReusableView()
             }
     }
+
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
