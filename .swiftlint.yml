@@ -5,7 +5,6 @@ opt_in_rules:
   - closure_spacing
   - conditional_returns_on_newline
   - empty_count
-  - explicit_init
   - fatal_error_message
   - first_where
   - force_unwrapping
@@ -22,3 +21,25 @@ included:
 excluded:
   - Carthage
   - Pods
+
+type_body_length:
+  warning: 100
+  error: 200
+function_body_length:
+  warning: 10
+  error: 20
+cyclomatic_complexity:
+  warning: 5
+  error: 10
+nesting:
+  statement_level:
+    warning: 3
+function_parameter_count:
+  warning: 5
+  error: 6
+file_length:
+  warning: 200
+  error: 400
+line_length:
+  warning: 120
+  error: 130

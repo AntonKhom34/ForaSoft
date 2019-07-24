@@ -36,13 +36,6 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-QM-sVL">
-                    <rect key="frame" x="5" y="533" width="310" height="30"/>
-                    <state key="normal" title="Загрузить еще 10 альбомов"/>
-                    <connections>
-                        <action selector="tappedButtonLoadTenMore:" destination="-1" eventType="touchUpInside" id="zJW-pp-OZa"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -51,11 +44,8 @@
                 <constraint firstItem="mKk-ot-Vsh" firstAttribute="top" secondItem="1ba-Nw-efn" secondAttribute="bottom" constant="10" id="CCh-XS-khU"/>
                 <constraint firstItem="mKk-ot-Vsh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L4O-tA-pdV"/>
                 <constraint firstItem="mKk-ot-Vsh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="chk-te-RTc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="F2c-QM-sVL" secondAttribute="bottom" constant="5" id="eoi-AY-deb"/>
-                <constraint firstItem="F2c-QM-sVL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="laK-Ea-QFV"/>
                 <constraint firstItem="1ba-Nw-efn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mpb-HV-VKD"/>
                 <constraint firstItem="mKk-ot-Vsh" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="qMW-V4-hFz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F2c-QM-sVL" secondAttribute="trailing" constant="5" id="ugt-DO-mq4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="46.875" y="54.929577464788736"/>

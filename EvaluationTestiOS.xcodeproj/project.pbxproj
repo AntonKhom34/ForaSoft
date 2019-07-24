@@ -33,14 +33,16 @@
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
-		CD9C987E22E71BD00091BF9F /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9C987D22E71BD00091BF9F /* CommentCell.xib */; };
+		CD9E158922E7500A004B9E43 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E158722E7500A004B9E43 /* CommentCell.swift */; };
+		CD9E158A22E7500A004B9E43 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9E158822E7500A004B9E43 /* CommentCell.xib */; };
 		CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */; };
 		CDB0945622E0A1B700A64269 /* DataAlbumsResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */; };
 		CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */; };
 		CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */; };
 		CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */; };
 		CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */; };
-		CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8E4B722E2211800B5E608 /* CommentCell.swift */; };
+		CDEF0DD222E8464C00FA591E /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEF0DD022E8464C00FA591E /* FooterView.swift */; };
+		CDEF0DD322E8464C00FA591E /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEF0DD122E8464C00FA591E /* FooterView.xib */; };
 		FE0F2FAA5DFB033C4861C1C3 /* Pods_EvaluationTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECBF8D29B6BED350116331 /* Pods_EvaluationTestiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,14 +78,16 @@
 		CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProviderProtocol.swift; sourceTree = "<group>"; };
 		CD59BF7122E05E03004E3470 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
-		CD9C987D22E71BD00091BF9F /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		CD9E158722E7500A004B9E43 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CD9E158822E7500A004B9E43 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResult.swift; sourceTree = "<group>"; };
 		CDB0945522E0A1B700A64269 /* DataAlbumsResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResultProtocol.swift; sourceTree = "<group>"; };
 		CDB0945722E0A47F00A64269 /* DataAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResult.swift; sourceTree = "<group>"; };
 		CDB0945922E0A48D00A64269 /* DataAlbumResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumResultProtocol.swift; sourceTree = "<group>"; };
 		CDB2FEBE22E4ADDE003F7027 /* CommentTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
 		CDB2FEBF22E4ADDE003F7027 /* CommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableCell.xib; sourceTree = "<group>"; };
-		CDD8E4B722E2211800B5E608 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CDEF0DD022E8464C00FA591E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		CDEF0DD122E8464C00FA591E /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		CD59BF5C22E057CC004E3470 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDEF0DCF22E8461E00FA591E /* Footer */,
 				CDD8E4B622E20B8600B5E608 /* Cell */,
 				CD59BF6522E05C98004E3470 /* AlbumsListViewProtocol.swift */,
 				CD59BF6122E05C82004E3470 /* AlbumsListViewController.swift */,
@@ -289,10 +294,19 @@
 		CDD8E4B622E20B8600B5E608 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				CDD8E4B722E2211800B5E608 /* CommentCell.swift */,
-				CD9C987D22E71BD00091BF9F /* CommentCell.xib */,
+				CD9E158722E7500A004B9E43 /* CommentCell.swift */,
+				CD9E158822E7500A004B9E43 /* CommentCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CDEF0DCF22E8461E00FA591E /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF0DD022E8464C00FA591E /* FooterView.swift */,
+				CDEF0DD122E8464C00FA591E /* FooterView.xib */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,11 +370,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9C987E22E71BD00091BF9F /* CommentCell.xib in Resources */,
 				CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */,
+				CDEF0DD322E8464C00FA591E /* FooterView.xib in Resources */,
 				CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
 				CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */,
+				CD9E158A22E7500A004B9E43 /* CommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,12 +458,12 @@
 				CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */,
 				CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */,
 				CD510B4222E3B56A004224CC /* AlbumDataResultProtocol.swift in Sources */,
+				CDEF0DD222E8464C00FA591E /* FooterView.swift in Sources */,
 				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
 				CD510B3422E3A52A004224CC /* DetailAlbumProvider.swift in Sources */,
 				CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */,
 				CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */,
 				CD59BF6622E05C98004E3470 /* AlbumsListViewProtocol.swift in Sources */,
-				CDD8E4B922E2211800B5E608 /* CommentCell.swift in Sources */,
 				CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */,
 				CD510B4422E3B5C9004224CC /* DetailTrackResult.swift in Sources */,
 				CD510B3622E3A53C004224CC /* AlbumDetailServies.swift in Sources */,
@@ -466,6 +481,7 @@
 				CD59BF6022E05827004E3470 /* ViewControllerFactory.swift in Sources */,
 				CD510B3A22E3A55B004224CC /* DetailAlbumProviderProtocol.swift in Sources */,
 				CD510B3E22E3A5D3004224CC /* DetailAlbumViewProtocol.swift in Sources */,
+				CD9E158922E7500A004B9E43 /* CommentCell.swift in Sources */,
 				CDB0945A22E0A48D00A64269 /* DataAlbumResultProtocol.swift in Sources */,
 				CDB0945822E0A47F00A64269 /* DataAlbumResult.swift in Sources */,
 				CD510B3C22E3A56F004224CC /* DetailAlbumPresenterProtocol.swift in Sources */,

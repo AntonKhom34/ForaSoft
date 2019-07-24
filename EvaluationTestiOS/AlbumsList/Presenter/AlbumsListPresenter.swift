@@ -9,9 +9,12 @@
 import UIKit
 
 class AlbumsListPresenter {
+    let albumsCountDefault = 20
+    var albumsCount = 20
+
     var albums: [DataAlbumResult]
     var lastRequestId: UUID?
-    var albumsCount = 10
+    var searchBarText: String
 
     // MARK: - Properties
 
@@ -25,6 +28,7 @@ class AlbumsListPresenter {
         self.provider = provider
         albums = []
         lastRequestId = nil
+        searchBarText = ""
     }
 
 }
@@ -33,10 +37,11 @@ class AlbumsListPresenter {
 
 extension AlbumsListPresenter: AlbumsListPresenterProtocol {
 
-    func onUserSelectedSearchString(_ searchString: String) {
-        albumsCount = 10
+    func onUserChangedSearchStringTo(_ searchString: String) {
+        searchBarText = searchString
+        albumsCount = albumsCountDefault
         lastRequestId = UUID.init()
-        getAlbumsWithSearchString(searchString)
+        getAlbums()
     }
 
     func getAlbumsCount() -> Int {
@@ -51,17 +56,23 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
         view.showDetailAlbumControllerWithCollectionId(album: albums[selectedAlbumIndex])
     }
 
-    func onUserSelectedLoadTenMore(_ searchString: String) {
-        albumsCount += 10
+    func onUserSelectedLoadMore() {
+        albumsCount += albumsCountDefault
         lastRequestId = UUID.init()
-        getAlbumsWithSearchString(searchString)
+        getAlbums()
+    }
+
+    func onUserKeyboardSearchButtonPressed() {
+        albumsCount = albumsCountDefault
+        lastRequestId = UUID.init()
+        getAlbums()
     }
 
     // MARK: - Private
 
-    private func getAlbumsWithSearchString(_ searchString: String) {
+    private func getAlbums() {
         view.startPreloader()
-        provider.getAlbumsWithSearchString(searchString, albumsCount) { [weak self, lastRequestId] albums in
+        provider.getAlbumsWithSearchString(searchBarText, albumsCount) { [weak self, lastRequestId] albums in
             guard let strongSelf = self else {
                 return
             }
@@ -74,4 +85,5 @@ extension AlbumsListPresenter: AlbumsListPresenterProtocol {
             }
         }
     }
+
 }

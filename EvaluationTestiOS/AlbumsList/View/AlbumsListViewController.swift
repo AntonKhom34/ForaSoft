@@ -11,14 +11,17 @@ import MBProgressHUD
 import IQKeyboardManagerSwift
 
 class AlbumsListViewController: UIViewController {
-    let numberOfItemPerRow: CGFloat = 3
-    let lineSpacing: CGFloat = 10
-    let interItemSpacing: CGFloat = 10
+
+    // MARK: - Const
+
+    private let footerViewHeight: CGFloat = 50
+    private let commentCellId = "commentCell"
+    private let footerViewIdentifier = "footerView"
+    private let collectionItemSize = 100
 
     // MARK: - Properties
 
     var presenter: AlbumsListPresenterProtocol?
-    private static let commentCellId = "commentCell"
     var collectionViewFlowLayout: UICollectionViewFlowLayout?
 
     // MARK: - Outlets
@@ -50,23 +53,16 @@ class AlbumsListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
-                                forCellWithReuseIdentifier: AlbumsListViewController.commentCellId)
+                                forCellWithReuseIdentifier: commentCellId)
+        collectionView.register(UINib(nibName: FooterView.nibName, bundle: nil),
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: footerViewIdentifier)
     }
 
     private func setupCollectionViewItemSize() {
         if collectionViewFlowLayout == nil {
-
-            let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
-            let height = width
-
             collectionViewFlowLayout = UICollectionViewFlowLayout()
-
-            getCollectionViewFlowLayout().itemSize = CGSize(width: width, height: height)
-            getCollectionViewFlowLayout().sectionInset = UIEdgeInsets.zero
-            getCollectionViewFlowLayout().scrollDirection = .vertical
-            getCollectionViewFlowLayout().minimumLineSpacing = lineSpacing
-            getCollectionViewFlowLayout().minimumInteritemSpacing = interItemSpacing
-
+            getCollectionViewFlowLayout().itemSize = CGSize(width: collectionItemSize, height: collectionItemSize)
             collectionView.setCollectionViewLayout(getCollectionViewFlowLayout(), animated: false)
         }
     }
@@ -87,16 +83,10 @@ class AlbumsListViewController: UIViewController {
         return collectionViewFlowLayout
     }
 
-    // MARK: - Events
+    // MARK: Events
 
-    @IBAction func tappedButtonLoadTenMore(_ sender: Any) {
-        guard let searchBarText = searchBar.text else {
-            return
-        }
-        if searchBarText != "" {
-            let correctSearchText = searchBarText.replacingOccurrences(of: " ", with: "+")
-            getPresenter().onUserSelectedLoadTenMore(correctSearchText)
-        }
+    @IBAction func tappedInFooter() {
+        getPresenter().onUserSelectedLoadMore()
     }
 
 }
@@ -132,10 +122,14 @@ extension AlbumsListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
             let correctSearchText = searchText.replacingOccurrences(of: " ", with: "+")
-            getPresenter().onUserSelectedSearchString(correctSearchText)
+            getPresenter().onUserChangedSearchStringTo(correctSearchText)
         }
     }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        getPresenter().onUserKeyboardSearchButtonPressed()
+        view.endEditing(true)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -147,14 +141,42 @@ extension AlbumsListViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumsListViewController.commentCellId,
-                                                      for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: commentCellId, for: indexPath)
         guard let commentCell = cell as? CommentCell else {
             fatalError("Cell is not CommentCell")
         }
 
         commentCell.setupCell(getPresenter().getAlbumImageAtIndex(indexPath.row))
         return commentCell
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            let footerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionFooter,
+                withReuseIdentifier: footerViewIdentifier, for: indexPath)
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tappedInFooter))
+            footerView.addGestureRecognizer(tapGestureRecognizer)
+            return footerView
+        } else {
+                return UICollectionReusableView()
+            }
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension AlbumsListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+        if searchBar.text != "" {
+            let size = CGSize(width: view.frame.width, height: footerViewHeight)
+            return size
+        }
+        return CGSize.zero
     }
 
 }

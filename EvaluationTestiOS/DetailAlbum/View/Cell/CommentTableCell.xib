@@ -65,7 +65,7 @@
                 <outlet property="trackNameLabel" destination="qtS-Ux-13h" id="sNj-Ia-egf"/>
                 <outlet property="trackNumberLabel" destination="0WN-GI-Wqx" id="BAF-Re-rtt"/>
                 <outlet property="trackPriceLabel" destination="a69-z9-P2c" id="KLN-2l-SHd"/>
-                <outlet property="trackTimeLabel" destination="uT8-ly-Ite" id="hfW-Ho-gij"/>
+                <outlet property="trackTimeLabel" destination="uT8-ly-Ite" id="tlj-vJ-bge"/>
             </connections>
             <point key="canvasLocation" x="36.231884057971016" y="20.089285714285712"/>
         </tableViewCell>

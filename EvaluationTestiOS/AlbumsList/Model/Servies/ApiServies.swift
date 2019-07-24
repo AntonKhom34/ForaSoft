@@ -11,6 +11,7 @@ import UIKit
 class ApiServies {
     private let apiUrl = "https://itunes.apple.com/search?term="
     private let entityAndLimitString = "&entity=album&limit="
+    private let sortString = "&sort=alphabetically"
 }
 
 // MARK: - ApiServiesProtocol
@@ -37,7 +38,7 @@ extension ApiServies: ApiServiesProtocol {
     // MARK: - Private
 
     private func getUrlWithSearchBar(_ searchString: String, _ albumsCount: Int) -> URL {
-        let urlString = apiUrl + "\(searchString)" + entityAndLimitString + "\(albumsCount)"
+        let urlString = apiUrl + "\(searchString)" + entityAndLimitString + "\(albumsCount)" + sortString
         guard let url = URL(string: urlString) else {
             fatalError("Could not converted urlString: \(urlString) to URL")
         }

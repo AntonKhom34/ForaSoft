@@ -9,9 +9,10 @@
 import UIKit
 
 protocol AlbumsListPresenterProtocol: class {
-    func onUserSelectedSearchString(_ searchString: String)
+    func onUserChangedSearchStringTo(_ searchString: String)
     func getAlbumsCount() -> Int
     func getAlbumImageAtIndex(_ index: Int) -> URL
     func onUserSelectedAlbumAtIndex(_ selectedAlbumIndex: Int)
-    func onUserSelectedLoadTenMore(_ searchString: String)
+    func onUserKeyboardSearchButtonPressed()
+    func onUserSelectedLoadMore()
 }
