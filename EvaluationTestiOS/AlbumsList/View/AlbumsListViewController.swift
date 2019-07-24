@@ -45,7 +45,7 @@ class AlbumsListViewController: UIViewController {
 
     private func setup() {
         searchBar.delegate = self
-        navigationController?.navigationBar.topItem?.title = "Альбомы"
+        navigationController?.navigationBar.topItem?.title = "AlbumsList_Title".localize()
         setupCollectionView()
     }
 

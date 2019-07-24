@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="U6b-Vx-4bR" customClass="FooterView" customModule="EvaluationTestiOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -40,6 +40,9 @@
                 <constraint firstAttribute="bottom" secondItem="iPa-RV-F5u" secondAttribute="bottom" id="x2d-wC-Cdv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="loadLabel" destination="OVd-vm-sRe" id="7B3-ub-fdO"/>
+            </connections>
         </collectionReusableView>
     </objects>
 </document>

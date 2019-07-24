@@ -66,13 +66,13 @@ extension DetailAlbumViewController: DetailAlbumViewProtocol {
                         _ price: Double?,
                         _ genreName: String) {
         albumLogoImage.kf.setImage(with: url)
-        albumArtistNameLabel.text = "Исполнитель: \(albumArtistName)"
-        albomNameLabel.text = "Альбом: \(albumName)"
-        genreNameLabel.text = "Жанр: \(genreName)"
+        albumArtistNameLabel.text = "DetailAlbum_ArtistName".localize() + albumArtistName
+        albomNameLabel.text = "DetailAlbum_AlbomName".localize() + albumName
+        genreNameLabel.text = "DetailAlbum_GenreName".localize() + genreName
         guard let price = price else {
             return
         }
-        albomPriceLabel.text = "Стоимость альбома: \(price)$"
+        albomPriceLabel.text = "DetailAlbum_AlbomPrice".localize() + "\(price)" + "DetailAlbum_Currency".localize()
     }
 
 }

@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  EvaluationTestiOS
+
+  Created by Антон Хомяков on 24/07/2019.
+  Copyright © 2019 Антон Хомяков. All rights reserved.
+*/
+
+// MARK: - AlbumsListViewController
+
+"AlbumsList_Title" = "Альбомы";
+
+// MARK: - Footer
+
+"Footer_Text" = "Загрузить еще 20 альбомов";
+
+// MARK: - DetailAlbum
+
+"DetailAlbum_ArtistName" = "Исполнитель: ";
+"DetailAlbum_AlbomName" = "Альбом: ";
+"DetailAlbum_GenreName" = "Жанр: ";
+"DetailAlbum_AlbomPrice" = "Стоимость альбома: ";
+"DetailAlbum_Currency" = "$";
+
+// MARK: - CommentTableCell
+
+"CommentTableCell_Currency" = "$";

@@ -10,9 +10,21 @@ import UIKit
 
 class FooterView: UICollectionReusableView {
 
+    // MARK: - Outlets
+
+    @IBOutlet private weak var loadLabel: UILabel!
+
+    // MARK: - Override
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localize()
+    }
+
+    // MARK: - Private
+
+    private func localize() {
+        loadLabel.text = "Footer_Text".localize()
     }
 
 }

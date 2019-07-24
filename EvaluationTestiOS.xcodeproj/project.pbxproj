@@ -33,6 +33,8 @@
 		CD59BF6F22E05DE3004E3470 /* AlbumsListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */; };
 		CD59BF7222E05E03004E3470 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7122E05E03004E3470 /* ApiServies.swift */; };
 		CD59BF7422E05E11004E3470 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */; };
+		CD9C06DA22E85BF100720F9D /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C06D922E85BF100720F9D /* StringExtention.swift */; };
+		CD9C06DC22E85C2B00720F9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD9C06DB22E85C2B00720F9D /* Localizable.strings */; };
 		CD9E158922E7500A004B9E43 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E158722E7500A004B9E43 /* CommentCell.swift */; };
 		CD9E158A22E7500A004B9E43 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9E158822E7500A004B9E43 /* CommentCell.xib */; };
 		CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */; };
@@ -78,6 +80,8 @@
 		CD59BF6E22E05DE3004E3470 /* AlbumsListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListProviderProtocol.swift; sourceTree = "<group>"; };
 		CD59BF7122E05E03004E3470 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CD59BF7322E05E11004E3470 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
+		CD9C06D922E85BF100720F9D /* StringExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
+		CD9C06DB22E85C2B00720F9D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CD9E158722E7500A004B9E43 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		CD9E158822E7500A004B9E43 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CDB0945322E0A18800A64269 /* DataAlbumsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlbumsResult.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		CD59BF4822E052EC004E3470 /* EvaluationTestiOS */ = {
 			isa = PBXGroup;
 			children = (
+				CD9C06D722E85BC500720F9D /* Extensions */,
 				CD29E90022E5955D0019256F /* Helper */,
 				CD59BF5B22E057C0004E3470 /* AlbumsList */,
 				CD510B2722E3A3C4004224CC /* DetailAlbum */,
@@ -216,6 +221,7 @@
 				CD59BF5022E052ED004E3470 /* Assets.xcassets */,
 				CD59BF5522E052ED004E3470 /* Info.plist */,
 				CD59BF5F22E05827004E3470 /* ViewControllerFactory.swift */,
+				CD9C06DB22E85C2B00720F9D /* Localizable.strings */,
 			);
 			path = EvaluationTestiOS;
 			sourceTree = "<group>";
@@ -280,6 +286,22 @@
 				CD59BF7122E05E03004E3470 /* ApiServies.swift */,
 			);
 			path = Servies;
+			sourceTree = "<group>";
+		};
+		CD9C06D722E85BC500720F9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C06D822E85BD700720F9D /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CD9C06D822E85BD700720F9D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C06D922E85BF100720F9D /* StringExtention.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		CDB2FEBD22E4ADC0003F7027 /* Cell */ = {
@@ -373,6 +395,7 @@
 				CDB2FEC122E4ADDE003F7027 /* CommentTableCell.xib in Resources */,
 				CDEF0DD322E8464C00FA591E /* FooterView.xib in Resources */,
 				CD510B2E22E3A4EF004224CC /* DetailAlbumViewController.xib in Resources */,
+				CD9C06DC22E85C2B00720F9D /* Localizable.strings in Resources */,
 				CD59BF6422E05C82004E3470 /* AlbumsListViewController.xib in Resources */,
 				CD59BF5122E052ED004E3470 /* Assets.xcassets in Resources */,
 				CD9E158A22E7500A004B9E43 /* CommentCell.xib in Resources */,
@@ -460,6 +483,7 @@
 				CD510B4222E3B56A004224CC /* AlbumDataResultProtocol.swift in Sources */,
 				CDEF0DD222E8464C00FA591E /* FooterView.swift in Sources */,
 				CD59BF6A22E05D9E004E3470 /* AlbumsListPresenterProtocol.swift in Sources */,
+				CD9C06DA22E85BF100720F9D /* StringExtention.swift in Sources */,
 				CD510B3422E3A52A004224CC /* DetailAlbumProvider.swift in Sources */,
 				CDB2FEC022E4ADDE003F7027 /* CommentTableCell.swift in Sources */,
 				CDB0945422E0A18800A64269 /* DataAlbumsResult.swift in Sources */,

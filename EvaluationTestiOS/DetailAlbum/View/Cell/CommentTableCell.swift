@@ -44,7 +44,7 @@ class CommentTableCell: UITableViewCell {
         guard let trackPrice = trackPrice else {
             return
         }
-        trackPriceLabel.text = "\(trackPrice)$"
+        trackPriceLabel.text = "\(trackPrice)" + "CommentTableCell_Currency".localize()
     }
 
     private func setTrackTime(_ detailAlbumResult: DetailTrackResult) {
